@@ -1,0 +1,46 @@
+{
+  "name": "howtodo",
+  "version": "0.8.0",
+  "description": "helper",
+  "main": "distrib/howtodo.min.js",
+  "directories": {
+    "test": "tests"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Sylvain59650/howtodo.git"
+  },
+  "keywords": [
+    "Howto",
+    "guide"
+  ],
+  "author": "Sylvain LONGEPEE",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Sylvain59650/howtodo/issues"
+  },
+  "homepage": "https://github.com/Sylvain59650/howtodo#readme",
+  "dependencies": {
+    "htmlelement-extension": "0.8.0"
+  },
+  "devDependencies": {
+    "babel-core": "^6.26.0",
+    "babel-plugin-remove-comments": "^2.0.0",
+    "babel-preset-env": "^1.6.1",
+    "babel-preset-es2015": "^6.24.1",
+    "del": "^3.0.0",
+    "gulp": "^3.9.1",
+    "gulp-babel": "^7.0.1",
+    "gulp-clean": "^0.4.0",
+    "gulp-concat": "^2.6.1",
+    "gulp-debug": "^3.2.0",
+    "gulp-uglify": "^3.0.0",
+    "gulp-umd": "^0.2.1",
+    "gulp-util": "^3.0.8",
+    "gulp-watch": "^5.0.0",
+    "lodash": "^4.17.5"
+  }
+}
