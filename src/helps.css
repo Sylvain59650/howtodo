@@ -1,6 +1,6 @@
-.guides-canvas,
-.guides-mask,
-.guides-overlay {
+.htd-canvas,
+.htd-mask,
+.htd-overlay {
   position: absolute;
   top: 0;
   left: 0;
@@ -8,16 +8,16 @@
   right: 0
 }
 
-.guides-overlay {
+.htd-overlay {
   /* background: rgba(0, 0, 0, 0.6);*/
   z-index: 99996
 }
 
-.guides-mask {
+.htd-mask {
   z-index: 99998
 }
 
-.guides-current-element {
+.htd-current-element {
   z-index: 99997;
   position: relative
 }
@@ -58,14 +58,14 @@
   }
 }
 
-.guides-fade-in {
+.htd-fade-in {
   -webkit-animation: fadeIn .25s ease;
   -moz-animation: fadeIn .25s ease;
   -o-animation: fadeIn .25s ease;
   animation: fadeIn .25s ease
 }
 
-.guides-guide {
+.htd-help {
   color: #fff;
   font-size: 1.5rem;
   text-shadow: 0 0 10px #000;
@@ -74,24 +74,24 @@
   z-index: 99999
 }
 
-.guides-guide svg {
+.htd-help svg {
   position: absolute;
   top: 0;
   left: 0
 }
 
-.guides-guide span {
+.htd-help span {
   display: inline-block;
   padding: 10px;
   font-size: 2rem
 }
 
-.guides-top svg {
+.htd-top svg {
   top: auto;
   bottom: 0
 }
 
-.guides-left svg {
+.htd-left svg {
   left: auto;
   right: 0
 }

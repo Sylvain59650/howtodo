@@ -1,12 +1,9 @@
 <html>
 
 <head>
-  <link rel="stylesheet" type="text/css" href="../src/guides.css">
-  <!--script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script-->
+  <link rel="stylesheet" type="text/css" href="../src/helps.css">
   <script type="text/javascript" src="../distrib/htmlelement.min.js"></script>
-  <script type="text/javascript" src="../src/functions.js"></script>
-  <script type="text/javascript" src="../src/guides.js"></script>
-
+  <script type="text/javascript" src="../src/helps.js"></script>
 </head>
 
 <body style="background-color:darkgoldenrod">
@@ -53,23 +50,33 @@
   <button type="button" id="demo" class="demo btn btn-success" onclick="guides.start()">Start demo</button>
   <script>
     var gg = {
-      guides: [{
+      items: [{
         attachTo: "#menu",
         html: '<div style="background-color:red">Ceci est le menu</div>',
         color: "red",
-        distance: 50
+        distance: 50,
+        timer: 1200
       }, {
         attachTo: "#navbar",
-        html: '<div style="background-color:green">Ceci est la barre de menu</div>'
+        html: '<div style="background-color:green">Ceci est la barre de menu</div>',
+        timer: 5000,
+        position: {
+          top: 50,
+          left: 200
+        }
       }, {
         attachTo: "#demo",
-        html: 'Ceci est la démo'
+        html: 'Ceci est la démo',
+        timer: 1500
       }, {
         attachTo: "#bottom",
         html: 'Ceci est le bas de la page'
       }, {
         attachTo: "#docs",
-        html: '<div style="background-color:orange">Ceci est la docs</div>',
+        html: '<div style="background-color:orange">Ceci est la docs</div>'
+      }, {
+        attachTo: "#docs",
+        htmlId: '#t1'
       }],
       options: {
         numero: true
@@ -80,9 +87,25 @@
         do: guides.goTo(2)
       }*/
     };
-    var guides = new Guides(gg);
-    guides.start();
+
+    function ff(event) {
+      console.log(event.type, event.detail);
+      if (event.detail.num % 2 == 0) {
+        event.detail.help.html = "";
+      }
+    }
+
+    document.body.on("renderHelp", ff);
+    var guides = new Helps(gg);
+    guides.start(0);
   </script>
+
+  <div style="display:none">
+    <div id="t1">
+      <img src="https://www.google.fr/images/branding/googlelogo/2x/googlelogo_color_272x92dp.png" />
+    </div>
+
+  </div>
 </body>
 
 </html>
