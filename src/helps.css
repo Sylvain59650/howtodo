@@ -95,3 +95,12 @@
   left: auto;
   right: 0
 }
+
+.htd-bottom svg {
+  bottom: auto;
+  top: 0
+}
+
+.htd-right svg {
+  left: 0
+}

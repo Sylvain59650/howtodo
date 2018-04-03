@@ -2,9 +2,10 @@
 
 <head>
   <link rel="stylesheet" type="text/css" href="../src/helps.css">
+  <!--script type="text/javascript" src="../node_modules/positionizer/distrib/positionizer.min.js"></script-->
+  <script type="text/javascript" src="../distrib/positionizer.js"></script>
   <script type="text/javascript" src="../distrib/htmlelement.min.js"></script>
   <script type="text/javascript" src="../src/helps.js"></script>
-  <script type="text/javascript" src="../distrib/positionizer.js"></script>
 </head>
 
 <body style="background-color:darkgoldenrod">
@@ -55,20 +56,18 @@
         attachTo: "#menu",
         html: '<div style="background-color:red">Ceci est le menu</div>',
         color: "red",
-        distance: 100,
         position: {
-          relative: "bottom",
+          relative: "bottom-center",
           dx: 100,
-          dy: 100,
-          attach1: "bottom",
-          attach2: "top"
+          dy: 100
         }
       }, {
         attachTo: "#navbar",
         html: '<div style="background-color:green">Ceci est la barre de menu</div>',
         position: {
-          top: 150,
-          left: 500
+          relative: "bottom-right",
+          dx: -100,
+          dy: 100
         }
       }, {
         attachTo: "#demo",

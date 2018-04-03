@@ -4,3 +4,4 @@ tests/
 src/
 .vscode
 gulpfile.js
+*.code-workspace
